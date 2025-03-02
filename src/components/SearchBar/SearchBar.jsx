@@ -1,4 +1,5 @@
 import style from "./SearchBar.module.css";
+import toast from "react-hot-toast";
 
 function SearchBar({ onSearch }) {
   function handleSubmit(event) {
@@ -12,7 +13,7 @@ function SearchBar({ onSearch }) {
       form.reset();
       return onSearch(query.toLowerCase());
     } else {
-      //   toast.error("Please enter a search query");
+      toast.error("Please enter a search query");
     }
   }
 

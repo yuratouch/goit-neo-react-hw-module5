@@ -1,0 +1,7 @@
+.castMemberCard {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  padding-left: 0;
+  width: fit-content;
+}

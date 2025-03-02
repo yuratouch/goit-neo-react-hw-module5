@@ -1,0 +1,8 @@
+.additionalInfo {
+  padding: 20px 0;
+}
+
+.additionalInfoList {
+  display: flex;
+  gap: 20px;
+}

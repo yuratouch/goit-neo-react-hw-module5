@@ -10,10 +10,10 @@ function HomePage() {
     fetchMovies().then((data) => setTrendingMovies(data.results));
   }, []);
 
-  console.log(trendingMovies);
   return (
-    <div>
-      <MovieList movies={trendingMovies} />
+    <div className="container">
+      <h1 className="heading">Trending Movies</h1>
+      <MovieList movies={trendingMovies} state={location} />
     </div>
   );
 }

@@ -1,0 +1,13 @@
+.movieCard {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 40px;
+}
+
+.movieText {
+  margin-bottom: 20px;
+}
+
+.overview {
+  max-width: 600px;
+}

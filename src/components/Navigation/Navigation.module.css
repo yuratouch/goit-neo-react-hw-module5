@@ -1,0 +1,15 @@
+.navigation {
+  background-color: #22a1f4;
+  padding: 20px 40px;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navLink {
+  text-decoration: none;
+  font-weight: 700;
+}

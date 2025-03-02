@@ -1,17 +1,21 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
-function MovieList({ movies }) {
+function MovieList({ movies, moviesNotFound }) {
+  const location = useLocation();
+
+  if (moviesNotFound) {
+    return <p>No movies found by entered query. Please try again.</p>;
+  }
   return (
-    <>
-      <h1>Trending Movies</h1>
-      <ul>
-        {movies.map((movie) => (
-          <li key={movie.id}>
-            <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
-          </li>
-        ))}
-      </ul>
-    </>
+    <ul>
+      {movies.map((movie) => (
+        <li key={movie.id}>
+          <Link to={`/movies/${movie.id}`} state={location}>
+            {movie.title}
+          </Link>
+        </li>
+      ))}
+    </ul>
   );
 }
 
